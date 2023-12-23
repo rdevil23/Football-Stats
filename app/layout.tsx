@@ -13,15 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="relative bg-black">
-          <div className="absolute top-0 left-0 w-full h-full">
-            <img
-              className="h-screen w-full object-cover"
-              src="./green-fake-grass-background-4k.jpg"
-              alt="Image by rawpixel.com on Freepik (https://www.freepik.com/free-photo/green-fake-grass-background_2791853.htm#query=football%20background&position=13&from_view=keyword&track=ais&uuid=4899e273-bbf2-4a83-bb6a-11e42676c552)"
-            />
-          </div>
-        </div>
+        <div className="relative bg-black"></div>
         {children}
       </body>
     </html>
