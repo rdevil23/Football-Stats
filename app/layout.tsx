@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import SearchBar from './components/searchBar/SearchBar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,7 +19,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <img src="/grass-bg.jpg" alt="" className="h-screen w-full object-cover" />
           </div>
           <div className="absolute top-0 left-0 w-full h-screen bg-gradient-to-t from-black/35 to-black/85"></div>
-          <div className="relative">{children}</div>
+          <div className="relative">
+            <SearchBar />
+            {children}
+          </div>
         </div>
       </body>
     </html>
