@@ -13,8 +13,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="relative bg-black"></div>
-        {children}
+        <div className="relative bg-black">
+          <div className="absolute top-0 left-0 w-full h-full">
+            <img src="/grass-bg.jpg" alt="" className="h-screen w-full object-cover" />
+          </div>
+          <div className="absolute top-0 left-0 w-full h-screen bg-gradient-to-t from-black/35 to-black/85"></div>
+          <div className="relative">{children}</div>
+        </div>
       </body>
     </html>
   );
